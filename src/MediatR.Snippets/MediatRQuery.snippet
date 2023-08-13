@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>MediatR Query</Title>
+      <Author>Mario Smolcic</Author>
+      <Description>Creates a new MediatR query.</Description>
+      <HelpUrl>www.codecrafting.tips</HelpUrl>
+      <Shortcut>mqry</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+<![CDATA[public static class $QueryName$
+{
+    public sealed record Query() : IRequest<$ResultType$>;
+
+    public sealed class QueryHandler : IRequestHandler<Query, $ResultType$>
+    {
+        public QueryHandler()
+        {
+        }
+
+        public async Task<$ResultType$> Handle(Query query, CancellationToken cancellationToken)
+        {
+            $end$
+        }
+    }
+}]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>QueryName</ID>
+          <ToolTip>Name of the query.</ToolTip>
+          <Default>NewQuery</Default>
+        </Literal>
+        <Literal>
+          <ID>ResultType</ID>
+          <ToolTip>Type of the result.</ToolTip>
+          <Default>Result</Default>
+        </Literal>
+      </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>System.Threading</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+        <Import>
+          <Namespace>MediatR</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

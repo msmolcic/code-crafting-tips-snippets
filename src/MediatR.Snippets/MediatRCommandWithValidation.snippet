@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>MediatR Command With Validation</Title>
+      <Author>Mario Smolcic</Author>
+      <Description>Creates a new MediatR command with validation.</Description>
+      <HelpUrl>www.codecrafting.tips</HelpUrl>
+      <Shortcut>mcmdv</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+<![CDATA[public static class $CommandName$
+{
+    public sealed record Command() : IRequest<Unit>;
+
+    public sealed class CommandValidator : AbstractValidator<Command>
+    {
+        public CommandValidator()
+        {
+        }
+    }
+
+    public sealed class CommandHandler : IRequestHandler<Command, Unit>
+    {
+        public CommandHandler()
+        {
+        }
+
+        public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
+        {
+            $end$
+            return Unit.Value;
+        }
+    }
+}]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>CommandName</ID>
+          <ToolTip>Name of the command.</ToolTip>
+          <Default>NewCommand</Default>
+        </Literal>
+      </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>System.Threading</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+        <Import>
+          <Namespace>FluentValidation</Namespace>
+        </Import>
+        <Import>
+          <Namespace>MediatR</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

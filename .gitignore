@@ -349,5 +349,6 @@ healthchecksdb
 # Custom addition
 bin/
 obj/
+dist/
 riderModule.iml
 logs/

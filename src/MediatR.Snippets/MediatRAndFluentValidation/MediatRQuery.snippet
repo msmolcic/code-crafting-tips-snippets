@@ -1,38 +1,42 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>MediatR Command</Title>
+      <Title>MediatR Query</Title>
       <Author>Mario Smolcic</Author>
-      <Description>Creates a new MediatR command.</Description>
+      <Description>Creates a new MediatR query.</Description>
       <HelpUrl>www.codecrafting.tips</HelpUrl>
-      <Shortcut>mcmd</Shortcut>
+      <Shortcut>mqry</Shortcut>
     </Header>
     <Snippet>
       <Code Language="CSharp">
-<![CDATA[public static class $CommandName$
+<![CDATA[public static class $QueryName$
 {
-    public sealed record Command() : IRequest<Unit>;
+    public sealed record Query() : IRequest<$ResultType$>;
 
-    public sealed class CommandHandler : IRequestHandler<Command, Unit>
+    public sealed class QueryHandler : IRequestHandler<Query, $ResultType$>
     {
-        public CommandHandler()
+        public QueryHandler()
         {
         }
 
-        public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<$ResultType$> Handle(Query query, CancellationToken cancellationToken)
         {
             $end$
-            return Unit.Value;
         }
     }
 }]]>
       </Code>
       <Declarations>
         <Literal>
-          <ID>CommandName</ID>
-          <ToolTip>Name of the command.</ToolTip>
-          <Default>NewCommand</Default>
+          <ID>QueryName</ID>
+          <ToolTip>Name of the query.</ToolTip>
+          <Default>NewQuery</Default>
+        </Literal>
+        <Literal>
+          <ID>ResultType</ID>
+          <ToolTip>Type of the result.</ToolTip>
+          <Default>Result</Default>
         </Literal>
       </Declarations>
       <Imports>

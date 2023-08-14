@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-    <Metadata>
-        <Identity Id="MediatR.Snippets.5dc73a9e-f932-48d2-948b-bd907f1847c3" Version="1.0.0.0" Language="en-US" Publisher="Mario Smolčić" />
-        <DisplayName>C# MediatR and FluentValidation Code Snippets</DisplayName>
-        <Description xml:space="preserve">Code snippets to quickly scaffold MediatR commands and queries with FluentValidation validation.</Description>
-        <MoreInfo>https://github.com/msmolcic/code-crafting-tips-snippets</MoreInfo>
-        <License>LICENSE.txt</License>
-        <GettingStartedGuide>https://github.com/msmolcic/code-crafting-tips-snippets</GettingStartedGuide>
-        <Icon>Resources\icon.png</Icon>
-        <PreviewImage>Resources\preview.png</PreviewImage>
-        <Tags>snippet, snippets, code snippets, mediatr, fluent validation</Tags>
-    </Metadata>
-    <Installation>
-        <InstallationTarget Version="[11.0,17.0)" Id="Microsoft.VisualStudio.Pro">
-            <ProductArchitecture>x86</ProductArchitecture>
-        </InstallationTarget>
-        <InstallationTarget Version="[17.0, 18.0)" Id="Microsoft.VisualStudio.Pro">
-            <ProductArchitecture>amd64</ProductArchitecture>
-        </InstallationTarget>
-    </Installation>
-    <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[11.0,)" DisplayName="Visual Studio core editor" />
-    </Prerequisites>
-    <Assets>
-        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="snippets.pkgdef" />
-    </Assets>
+  <Metadata>
+    <Identity Id="5dc73a9e-f932-48d2-948b-bd907f1847c3" Version="1.0.0" Language="en-US" Publisher="Mario Smolčić" />
+    <DisplayName>C# MediatR and FluentValidation Code Snippets</DisplayName>
+    <Description xml:space="preserve">Code snippets to quickly scaffold MediatR commands and queries with FluentValidation validation.</Description>
+    <MoreInfo>https://github.com/msmolcic/code-crafting-tips-snippets</MoreInfo>
+    <License>LICENSE.txt</License>
+    <Icon>Resources\icon.png</Icon>
+    <PreviewImage>Resources\preview.png</PreviewImage>
+    <Tags>snippet, snippets, code snippets, mediatr, fluent validation</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,17.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="snippets.pkgdef" />
+  </Assets>
 </PackageManifest>

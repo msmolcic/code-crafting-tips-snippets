@@ -179,6 +179,9 @@ public static class NewQuery
 - [MediatR](https://www.nuget.org/packages/MediatR/) NuGet package.
 - [FluentValidation](https://www.nuget.org/packages/FluentValidation/) NuGet package.
 
+## Contribute
+Check out the [contribution guidelines](.github/CONTRIBUTING.md) if you want to contribute to this project.
+
 ## About
 
 Created by **Mario Smolcic**. For more developer tips and tutorials, visit [www.codecrafting.tips](http://www.codecrafting.tips).
